@@ -14,7 +14,7 @@ if (isset($_SESSION["usuario_id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AgendaPlus — Gestión de Contactos</title>
+    <title>Agenda360 — Directorio Personal de Contactos</title>
 
     <link rel="stylesheet" href="css/estilo.css">
 </head>
@@ -28,17 +28,17 @@ if (isset($_SESSION["usuario_id"])) {
             <div class="inicio-contenido">
 
                 <div class="logo">
-                    Agenda<span>Plus</span>
+                    Agenda<span>360</span>
                 </div>
 
                 <h1>
-                    Tu agenda personal,
-                    <span>simple y siempre al día.</span>
+                    Tu directorio de contactos,
+                    <span>centralizado y protegido.</span>
                 </h1>
 
                 <p>
-                    Gestiona, organiza y encuentra a tus contactos de forma rápida,
-                    eficiente y con total privacidad desde cualquier lugar.
+                    La forma más rápida, moderna y segura de gestionar tus contactos
+                    personales con una visión completa en 360 grados.
                 </p>
 
                 <div class="inicio-botones">

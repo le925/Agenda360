@@ -50,7 +50,7 @@ if (!$contacto) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Editar contacto | AgendaPlus</title>
+    <title>Editar contacto | Agenda360</title>
 
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
@@ -61,7 +61,7 @@ if (!$contacto) {
         <div class="contenedor navbar-contenido">
 
             <a href="listar.php" class="navbar-logo">
-                Agenda<span>Plus</span>
+                Agenda<span>360</span>
             </a>
 
             <div class="navbar-usuario">
@@ -86,8 +86,8 @@ if (!$contacto) {
         <section class="formulario-card">
 
             <div class="formulario-cabecera">
-                <h1>Modificar contacto</h1>
-                <p>Edita la información de este contacto en tu agenda.</p>
+                <h1>Editar información</h1>
+                <p>Modifica los datos del contacto seleccionado.</p>
             </div>
 
             <form action="actualizar.php" method="POST">

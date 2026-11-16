@@ -1,29 +1,28 @@
 /* ==========================================================================
-   AGENDA PLUS / SISTEMA DE GESTIÓN DE CONTACTOS
-   Tema: Emerald Green Moderno & Limpio
+   AGENDA 360 / SISTEMA DE GESTIÓN DE CONTACTOS
+   Tema: Celeste / Sky Blue Moderno & Profesional
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. VARIABLES Y CONFIGURACIÓN GENERAL
    -------------------------------------------------------------------------- */
 :root {
-    /* Paleta Verde */
-    --verde-primario: #059669;        /* Esmeralda vibrante */
-    --verde-secundario: #047857;      /* Verde bosque profundo */
-    --verde-oscuro: #064e3b;          /* Verde pino oscuro */
-    --verde-hover: #10b981;           /* Esmeralda claro al pasar cursor */
-    --verde-suave: #ecfdf5;           /* Fondo menta claro */
-    --verde-borde: #a7f3d0;           /* Borde menta suave */
-    --verde-acento: #34d399;          /* Acento verde */
+    /* Paleta Celeste / Sky Blue */
+    --celeste-primario: #0284c7;       /* Azul cielo vibrante */
+    --celeste-secundario: #0369a1;     /* Azul cielo profundo */
+    --celeste-oscuro: #0c4a6e;         /* Marino suave */
+    --celeste-hover: #0ea5e9;          /* Celeste brillante */
+    --celeste-suave: #f0f9ff;          /* Fondo celeste claro / hielo */
+    --celeste-borde: #bae6fd;          /* Borde celeste pastel */
+    --celeste-acento: #38bdf8;         /* Acento cian / celeste */
 
     /* Tonos Neutros */
     --blanco: #ffffff;
     --fondo-cuerpo: #f8fafc;
-    --texto-principal: #0f172a;       /* Gris pizarra oscuro */
-    --texto-secundario: #475569;      /* Gris intermedio */
-    --texto-mutado: #64748b;          /* Gris suave */
+    --texto-principal: #0f172a;        /* Gris pizarra oscuro */
+    --texto-secundario: #475569;       /* Gris intermedio */
+    --texto-mutado: #64748b;           /* Gris suave */
     --gris-borde: #e2e8f0;
-    --gris-fondo-tabla: #f8fafc;
 
     /* Estados */
     --rojo-texto: #b91c1c;
@@ -37,8 +36,8 @@
     --radio-lg: 16px;
     --radio-pill: 9999px;
     --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
-    --sombra-card: 0 10px 25px -5px rgba(5, 150, 105, 0.07), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-    --sombra-hover: 0 14px 28px -5px rgba(5, 150, 105, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --sombra-card: 0 10px 25px -5px rgba(2, 132, 199, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --sombra-hover: 0 14px 28px -5px rgba(2, 132, 199, 0.16), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -85,15 +84,15 @@ body {
 }
 
 .btn-principal {
-    background: linear-gradient(135deg, var(--verde-primario) 0%, var(--verde-secundario) 100%);
+    background: linear-gradient(135deg, var(--celeste-primario) 0%, var(--celeste-secundario) 100%);
     color: var(--blanco);
-    box-shadow: 0 3px 10px rgba(5, 150, 105, 0.25);
+    box-shadow: 0 3px 10px rgba(2, 132, 199, 0.25);
 }
 
 .btn-principal:hover {
-    background: linear-gradient(135deg, var(--verde-hover) 0%, var(--verde-primario) 100%);
+    background: linear-gradient(135deg, var(--celeste-hover) 0%, var(--celeste-primario) 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
+    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35);
 }
 
 .btn-principal:active {
@@ -102,14 +101,14 @@ body {
 
 .btn-secundario {
     background-color: var(--blanco);
-    color: var(--verde-secundario);
-    border: 1px solid var(--verde-borde);
+    color: var(--celeste-secundario);
+    border: 1px solid var(--celeste-borde);
 }
 
 .btn-secundario:hover {
-    background-color: var(--verde-suave);
-    border-color: var(--verde-primario);
-    color: var(--verde-oscuro);
+    background-color: var(--celeste-suave);
+    border-color: var(--celeste-primario);
+    color: var(--celeste-oscuro);
     transform: translateY(-1px);
 }
 
@@ -151,8 +150,8 @@ body {
 
 .form-grupo input:focus {
     background-color: var(--blanco);
-    border-color: var(--verde-primario);
-    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+    border-color: var(--celeste-primario);
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
 }
 
 /* --------------------------------------------------------------------------
@@ -172,9 +171,9 @@ body {
 }
 
 .mensaje-exito {
-    color: #065f46;
-    background-color: #ecfdf5;
-    border-color: var(--verde-primario);
+    color: #0369a1;
+    background-color: #f0f9ff;
+    border-color: var(--celeste-primario);
 }
 
 .mensaje-error {
@@ -202,9 +201,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(5, 150, 105, 0.06) 0%, transparent 45%),
-                linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+    background: radial-gradient(circle at 12% 18%, rgba(14, 165, 233, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 88% 82%, rgba(2, 132, 199, 0.08) 0%, transparent 45%),
+                linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
     padding: 30px 15px;
 }
 
@@ -215,7 +214,7 @@ body {
     background-color: var(--blanco);
     padding: 55px 45px;
     border-radius: var(--radio-lg);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(2, 132, 199, 0.2);
     box-shadow: var(--sombra-card);
     position: relative;
     overflow: hidden;
@@ -228,24 +227,25 @@ body {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, var(--verde-primario), var(--verde-acento));
+    background: linear-gradient(90deg, var(--celeste-primario), var(--celeste-acento));
 }
 
 .logo {
     display: inline-block;
     font-size: 28px;
     font-weight: 800;
-    color: var(--verde-oscuro);
+    color: var(--celeste-oscuro);
     margin-bottom: 28px;
     letter-spacing: -0.5px;
 }
 
 .logo span {
-    color: var(--verde-primario);
-    background: var(--verde-suave);
+    color: var(--celeste-primario);
+    background: var(--celeste-suave);
     padding: 3px 10px;
     border-radius: var(--radio-sm);
     margin-left: 4px;
+    border: 1px solid var(--celeste-borde);
 }
 
 .inicio-contenido h1 {
@@ -259,7 +259,7 @@ body {
 
 .inicio-contenido h1 span {
     display: block;
-    color: var(--verde-secundario);
+    color: var(--celeste-secundario);
     font-weight: 700;
 }
 
@@ -286,9 +286,9 @@ body {
     align-items: center;
     justify-content: center;
     padding: 40px 16px;
-    background: radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(5, 150, 105, 0.08) 0%, transparent 40%),
-                linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+    background: radial-gradient(circle at 15% 15%, rgba(14, 165, 233, 0.14) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(2, 132, 199, 0.09) 0%, transparent 40%),
+                linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
 }
 
 .auth-contenedor {
@@ -297,7 +297,7 @@ body {
     background-color: var(--blanco);
     padding: 42px 38px;
     border-radius: var(--radio-lg);
-    border: 1px solid rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(2, 132, 199, 0.18);
     box-shadow: var(--sombra-card);
     position: relative;
     overflow: hidden;
@@ -310,7 +310,7 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--verde-primario), var(--verde-acento));
+    background: linear-gradient(90deg, var(--celeste-primario), var(--celeste-acento));
 }
 
 .auth-marca {
@@ -322,16 +322,17 @@ body {
     text-decoration: none;
     font-size: 26px;
     font-weight: 800;
-    color: var(--verde-oscuro);
+    color: var(--celeste-oscuro);
     letter-spacing: -0.5px;
 }
 
 .auth-marca a span {
-    color: var(--verde-primario);
-    background: var(--verde-suave);
+    color: var(--celeste-primario);
+    background: var(--celeste-suave);
     padding: 2px 8px;
     border-radius: var(--radio-sm);
     margin-left: 4px;
+    border: 1px solid var(--celeste-borde);
 }
 
 .auth-cabecera {
@@ -365,14 +366,14 @@ body {
 }
 
 .auth-pie a {
-    color: var(--verde-secundario);
+    color: var(--celeste-secundario);
     font-weight: 600;
     text-decoration: none;
     margin-left: 4px;
 }
 
 .auth-pie a:hover {
-    color: var(--verde-hover);
+    color: var(--celeste-hover);
     text-decoration: underline;
 }
 
@@ -396,7 +397,7 @@ body {
 }
 
 .navbar-logo {
-    color: var(--verde-oscuro);
+    color: var(--celeste-oscuro);
     font-size: 22px;
     font-weight: 800;
     text-decoration: none;
@@ -406,12 +407,13 @@ body {
 }
 
 .navbar-logo span {
-    color: var(--verde-primario);
-    background-color: var(--verde-suave);
+    color: var(--celeste-primario);
+    background-color: var(--celeste-suave);
     padding: 2px 8px;
     border-radius: var(--radio-sm);
     margin-left: 6px;
     font-size: 18px;
+    border: 1px solid var(--celeste-borde);
 }
 
 .navbar-usuario {
@@ -423,12 +425,11 @@ body {
 
 .navbar-usuario span {
     font-weight: 600;
-    color: var(--texto-principal);
-    background-color: var(--verde-suave);
-    color: var(--verde-secundario);
+    color: var(--celeste-secundario);
+    background-color: var(--celeste-suave);
     padding: 6px 14px;
     border-radius: var(--radio-pill);
-    border: 1px solid var(--verde-borde);
+    border: 1px solid var(--celeste-borde);
 }
 
 .navbar-usuario a {
@@ -470,7 +471,7 @@ body {
     margin: 0 0 4px;
     font-size: 12.5px;
     font-weight: 700;
-    color: var(--verde-primario) !important;
+    color: var(--celeste-primario) !important;
     text-transform: uppercase;
     letter-spacing: 0.8px;
 }
@@ -485,15 +486,15 @@ body {
 .dashboard-correo {
     margin: 4px 0 8px;
     font-size: 13.5px;
-    color: var(--verde-secundario);
+    color: var(--celeste-secundario);
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background-color: var(--verde-suave);
+    background-color: var(--celeste-suave);
     padding: 3px 10px;
     border-radius: var(--radio-sm);
-    border: 1px solid var(--verde-borde);
+    border: 1px solid var(--celeste-borde);
 }
 
 .dashboard-correo span {
@@ -520,7 +521,7 @@ body {
 .estadistica-card {
     background: var(--blanco);
     border: 1px solid var(--gris-borde);
-    border-left: 5px solid var(--verde-primario);
+    border-left: 5px solid var(--celeste-primario);
     border-radius: var(--radio-md);
     padding: 22px 24px;
     box-shadow: var(--sombra-suave);
@@ -539,7 +540,7 @@ body {
 }
 
 .estadistica-card strong {
-    color: var(--verde-secundario);
+    color: var(--celeste-secundario);
     font-size: 32px;
     font-weight: 800;
 }
@@ -585,14 +586,14 @@ body {
 }
 
 .tabla-contactos th {
-    background-color: var(--verde-suave);
-    color: var(--verde-oscuro);
+    background-color: var(--celeste-suave);
+    color: var(--celeste-oscuro);
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.6px;
     padding: 14px 20px;
-    border-bottom: 1px solid var(--verde-borde);
+    border-bottom: 1px solid var(--celeste-borde);
     text-align: left;
 }
 
@@ -614,7 +615,7 @@ body {
 }
 
 .tabla-contactos tbody tr:hover {
-    background-color: #f7fdf9;
+    background-color: #f7faff;
 }
 
 .tabla-contactos tbody tr:last-child td {
@@ -634,9 +635,9 @@ body {
     display: inline-flex;
     align-items: center;
     padding: 6px 14px;
-    background-color: var(--verde-suave);
-    color: var(--verde-secundario);
-    border: 1px solid var(--verde-borde);
+    background-color: var(--celeste-suave);
+    color: var(--celeste-secundario);
+    border: 1px solid var(--celeste-borde);
     border-radius: var(--radio-sm);
     text-decoration: none;
     font-weight: 600;
@@ -645,9 +646,9 @@ body {
 }
 
 .accion-editar:hover {
-    background-color: var(--verde-primario);
+    background-color: var(--celeste-primario);
     color: var(--blanco);
-    border-color: var(--verde-primario);
+    border-color: var(--celeste-primario);
     transform: translateY(-1px);
 }
 
@@ -717,7 +718,7 @@ button.accion-eliminar:hover {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--verde-primario), var(--verde-acento));
+    background: linear-gradient(90deg, var(--celeste-primario), var(--celeste-acento));
 }
 
 .formulario-cabecera {

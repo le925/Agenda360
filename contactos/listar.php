@@ -32,7 +32,7 @@ $total_contactos = count($contactos);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mis contactos | AgendaPlus</title>
+    <title>Mis contactos | Agenda360</title>
 
     <link rel="stylesheet" href="../css/estilo.css">
 
@@ -45,7 +45,7 @@ $total_contactos = count($contactos);
         <div class="contenedor navbar-contenido">
 
             <a href="listar.php" class="navbar-logo">
-                Agenda<span>Plus</span>
+                Agenda<span>360</span>
             </a>
 
             <div class="navbar-usuario">
@@ -73,11 +73,11 @@ $total_contactos = count($contactos);
             <div>
 
                 <p class="dashboard-saludo">
-                    Panel de control
+                    Panel Agenda360
                 </p>
 
                 <h1>
-                    Bienvenido, <?= htmlspecialchars($_SESSION["usuario_nombre"]) ?>
+                    Hola, <?= htmlspecialchars($_SESSION["usuario_nombre"]) ?>
                 </h1>
 
                 <div class="dashboard-correo">
@@ -85,7 +85,7 @@ $total_contactos = count($contactos);
                 </div>
 
                 <p>
-                    Consulta, administra y organiza todos tus contactos personales.
+                    Administra y consulta tus contactos registrados de forma sencilla.
                 </p>
 
             </div>
@@ -105,7 +105,7 @@ $total_contactos = count($contactos);
                 <div>
 
                     <p>
-                        Contactos registrados
+                        Total de contactos
                     </p>
 
                     <strong>
@@ -125,11 +125,11 @@ $total_contactos = count($contactos);
                 <div>
 
                     <h2>
-                        Directorio de Contactos
+                        Listado de Contactos
                     </h2>
 
                     <p>
-                        Listado completo de personas registradas en tu cuenta.
+                        Contactos privados pertenecientes a tu cuenta.
                     </p>
 
                 </div>
@@ -141,17 +141,17 @@ $total_contactos = count($contactos);
                 <div class="estado-vacio">
 
                     <h3>
-                        Aún no tienes contactos guardados
+                        No tienes contactos guardados todavía
                     </h3>
 
                     <p>
-                        Agrega personas para verlas organizadas en tu directorio.
+                        Empieza agregando tu primer contacto para organizarlo aquí.
                     </p>
 
                     <a
                         href="crear.php"
                         class="btn btn-principal">
-                        Agregar primer contacto
+                        Agregar contacto
                     </a>
 
                 </div>
@@ -213,7 +213,7 @@ $total_contactos = count($contactos);
                                         </a>
 
                                         <form action="eliminar.php" method="POST"
-                                            onsubmit="return confirm('¿Estás seguro de que deseas eliminar este contacto?');"
+                                            onsubmit="return confirm('¿Confirmas que deseas eliminar este contacto?');"
                                             style="display:inline;">
 
                                             <input type="hidden" name="id" value="<?= (int)$contacto["id"] ?>">

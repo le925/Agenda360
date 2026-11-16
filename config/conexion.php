@@ -12,7 +12,7 @@ $opciones = [
 
 // Soporte automático para entorno local (con contraseña) y entrega académica (XAMPP por defecto sin contraseña)
 $posibles_passwords = ["Topglobalvims", ""];
-$posibles_dbs = ["AgendaPlus", "agendaplus", "agenda_contactos"];
+$posibles_dbs = ["Agenda360", "agenda360", "AgendaPlus", "agenda_contactos"];
 
 $conexion = null;
 

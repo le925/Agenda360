@@ -1,4 +1,4 @@
-# AgendaPlus — Agenda Personal de Contactos
+# Agenda360 — Directorio Personal de Contactos
 
 Aplicación web desarrollada en PHP y MySQL para la gestión académica y profesional de una agenda personal de contactos, integrando autenticación de usuarios, control de sesiones y aislamiento estricto de información.
 
@@ -9,18 +9,18 @@ Aplicación web desarrollada en PHP y MySQL para la gestión académica y profes
 * **Institución:** UNIVERSIDAD PARTICULAR DE LOJA
 * **Carrera / Programa:** Tecnología de la Información 
 * **Asignatura / Módulo:** Desarrollo Web
-* **Estudiante:** Romero Landa Alex Sebastián
+* **Estudiante:** Solis Solis Leovel Alexander
 * **Docente / Tutora:** TORRES GUARNIZO DIANA ALEXANDRA
 * **Fecha de Entrega:** 15/11/2026
-* **Repositorio en GitHub:** https://github.com/alex-romero7/AgendaPlus
+* **Repositorio en GitHub:** https://github.com/le925/Agenda360
 
 ---
 
 ## Descripción y Objetivo del Proyecto
 
-AgendaPlus es un sistema web concebido para que cada usuario registrado disponga de un entorno privado donde registrar, consultar, actualizar y eliminar contactos de forma organizada y segura.
+Agenda360 es una plataforma web desarrollada para que cada usuario disponga de un entorno privado y centralizado donde registrar, consultar, actualizar y eliminar sus contactos personales con una visión completa en 360 grados.
 
-El objetivo principal es aplicar buenas prácticas de desarrollo web backend en PHP con arquitectura cliente-servidor y base de datos relacional MySQL, cumpliendo con los estándares de seguridad requeridos: cifrado unidireccional de contraseñas, gestión segura de sesiones, sentencias preparadas contra inyección SQL y control estricto de autorización para evitar el acceso no autorizado a datos ajenos.
+El objetivo principal es implementar buenas prácticas de desarrollo web backend en PHP con arquitectura cliente-servidor y base de datos relacional MySQL, cumpliendo con los estándares de seguridad requeridos: cifrado unidireccional de contraseñas, gestión segura de sesiones, sentencias preparadas contra inyección SQL y control estricto de autorización para evitar el acceso no autorizado a datos ajenos.
 
 ---
 
@@ -29,7 +29,7 @@ El objetivo principal es aplicar buenas prácticas de desarrollo web backend en 
 * **Lenguaje Backend:** PHP (utilizando extensión PDO para persistencia).
 * **Base de Datos:** MySQL / MariaDB (motor InnoDB, codificación UTF-8 Multibyte).
 * **Servidor Web:** Apache (entorno XAMPP).
-* **Frontend:** HTML5 semántico y CSS3 responsivo.
+* **Frontend:** HTML5 semántico y CSS3 responsivo (tema celeste / sky blue moderno).
 
 ---
 
@@ -44,28 +44,28 @@ El objetivo principal es aplicar buenas prácticas de desarrollo web backend en 
 ## Instalación Paso a Paso
 
 1. Clonar o descargar el repositorio dentro del directorio de publicación del servidor web:
-   * En XAMPP para Windows: `C:\xampp\htdocs\AgendaContactos`
+   * En XAMPP para Windows: `C:\xampp\htdocs\Agenda360`
 2. Iniciar los módulos de **Apache** y **MySQL** desde el Panel de Control de XAMPP.
 3. Importar la base de datos relacional (instrucciones en la siguiente sección).
 4. Verificar la configuración de conexión en `config/conexion.php` según las credenciales de su MySQL local.
 5. Abrir el navegador e ingresar a la URL:
    ```text
-   http://localhost/AgendaContactos/
+   http://localhost/Agenda360/
    ```
 
 ---
 
 ## Base de Datos e Importación
 
-El proyecto incluye el script SQL completo en la raíz: `AgendaPlus.sql`.
+El proyecto incluye el script SQL completo en la raíz: `Agenda360.sql`.
 
 ### Pasos para importar:
 1. Abrir phpMyAdmin en el navegador: `http://localhost/phpmyadmin/`.
 2. Dirigirse a la pestaña **Importar**.
-3. Seleccionar el archivo `AgendaPlus.sql` y hacer clic en **Importar** (o ejecutar su contenido en la pestaña **SQL**).
+3. Seleccionar el archivo `Agenda360.sql` y hacer clic en **Importar** (o ejecutar su contenido en la pestaña **SQL**).
 
 ### Estructura relacional:
-* **Base de datos:** `AgendaPlus` (juego de caracteres `utf8mb4` con cotejamiento `utf8mb4_unicode_ci`).
+* **Base de datos:** `Agenda360` (juego de caracteres `utf8mb4` con cotejamiento `utf8mb4_unicode_ci`).
 * **Tabla `usuarios`:** Almacena la cuenta de acceso (`id`, `nombre`, `correo` único, `password` como hash de 255 caracteres y `fecha_registro`).
 * **Tabla `contactos`:** Almacena los contactos registrados (`id`, `id_usuario`, `nombre`, `telefono`, `correo`, `ciudad`).
 * **Integridad referencial:** La tabla `contactos` implementa la restricción de clave foránea `fk_contactos_usuario` vinculada a `usuarios(id)` con reglas `ON DELETE CASCADE` y `ON UPDATE CASCADE`.
@@ -81,8 +81,8 @@ La conexión se gestiona mediante PDO en el archivo `config/conexion.php`.
 * **Instalación con contraseña personalizada:**
   Si su servidor local de MySQL utiliza contraseña, edite la variable en `config/conexion.php`:
   ```php
-  $host = "localhost";
-  $db = "AgendaPlus";
+  $host = "127.0.0.1";
+  $db = "Agenda360";
   $usuario = "root";
   $password = "su_contraseña_aqui";
   ```
@@ -94,7 +94,7 @@ La conexión se gestiona mediante PDO en el archivo `config/conexion.php`.
 ## Estructura del Proyecto
 
 ```text
-AgendaContactos/
+Agenda360/
 │
 ├── auth/                       # Módulo de autenticación y control de acceso
 │   ├── autenticar.php          # Validación de credenciales y apertura de sesión
@@ -104,7 +104,7 @@ AgendaContactos/
 │   └── registro.php            # Formulario de creación de cuenta
 │
 ├── config/                     # Configuración de base de datos
-│   ├── conexion.php            # Conexión activa a MySQL vía PDO
+│   ├── conexion.php            # Conexión activa a MySQL vía PDO (detección inteligente)
 │   └── conexion.example.php    # Plantilla de configuración de referencia
 │
 ├── contactos/                  # Módulo CRUD de contactos (rutas privadas)
@@ -116,7 +116,7 @@ AgendaContactos/
 │   └── listar.php              # Panel principal y consulta de contactos del usuario
 │
 ├── css/                        # Estilos visuales
-│   └── estilo.css              # Hoja de estilos CSS responsiva del sistema
+│   └── estilo.css              # Hoja de estilos CSS responsiva del sistema (tema celeste)
 │
 ├── includes/                   # Componentes de soporte
 │   ├── mensajes.php            # Funciones para mensajes flash de sesión (éxito/error)
@@ -125,12 +125,10 @@ AgendaContactos/
 │   └── app.js                  # Archivo base reservado para scripts futuros
 │
 ├── .gitignore                  # Exclusiones de control de versiones
-├── AgendaPlus.sql              # Script de creación de base de datos y tablas
+├── Agenda360.sql               # Script de creación de base de datos y tablas
 ├── index.php                   # Página pública de bienvenida / redirección
 └── README.md                   # Documentación académica y técnica del proyecto
 ```
-
-*(Nota: Los archivos `header.php`, `navbar.php`, `footer.php` y `app.js` se conservan en la estructura como elementos base previstos para futuras ampliaciones de modularización).*
 
 ---
 
@@ -143,7 +141,7 @@ AgendaContactos/
 
 ### 2. Gestión de Contactos (CRUD)
 * **Crear (C):** `contactos/crear.php` y `contactos/guardar.php` permiten registrar un nuevo contacto asociándolo obligatoriamente al identificador del usuario en sesión (`id_usuario`).
-* **Consultar / Listar (R):** `contactos/listar.php` presenta la lista exclusiva de contactos del usuario autenticado, indicando el total registrado o un estado informativo si la agenda está vacía.
+* **Consultar / Listar (R):** `contactos/listar.php` presenta la lista exclusiva de contactos del usuario autenticado, indicando el total registrado o un estado informativo si la agenda está vacía, además de mostrar el nombre y correo del usuario.
 * **Actualizar (U):** `contactos/editar.php` y `contactos/actualizar.php` cargan y modifican los datos de un contacto, validando previamente que pertenezca al usuario en sesión.
 * **Eliminar (D):** `contactos/eliminar.php` suprime el contacto mediante una solicitud `POST` tras confirmación del usuario, verificando la autorización de propiedad.
 
@@ -176,14 +174,14 @@ El proyecto incorpora los mecanismos de seguridad requeridos por la rúbrica de 
 
 1. **Prueba de Registro e Inicio de Sesión:**
    * Crear una cuenta con nombre, correo y contraseña.
-   * Iniciar sesión y comprobar la bienvenida personalizada en el panel.
+   * Iniciar sesión y comprobar la bienvenida personalizada en el panel con nombre y correo.
 2. **Prueba de Operaciones CRUD:**
    * Registrar un nuevo contacto y verificar que aparezca en el listado.
    * Editar los datos del contacto creado y guardar los cambios.
    * Eliminar el contacto mediante el botón de eliminación y confirmar la alerta.
 3. **Prueba de Protección de Rutas Privadas:**
    * Cerrar sesión y tratar de acceder directamente en la barra del navegador a:
-     `http://localhost/AgendaContactos/contactos/listar.php`
+     `http://localhost/Agenda360/contactos/listar.php`
    * Confirmar que el sistema bloquea el acceso y redirige a `login.php`.
 4. **Prueba de Aislamiento de Información entre Usuarios:**
    * Registrar dos cuentas con correos distintos (ej. Usuario A y Usuario B).

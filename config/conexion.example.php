@@ -4,7 +4,7 @@
 // En XAMPP estándar el usuario es 'root' sin contraseña ($password = "").
 
 $host = "127.0.0.1";
-$db = "AgendaPlus";
+$db = "Agenda360";
 $usuario = "root";
 $password = ""; 
 $charset = "utf8mb4";

@@ -19,7 +19,7 @@ require_once "../includes/mensajes.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nuevo contacto | AgendaPlus</title>
+    <title>Nuevo contacto | Agenda360</title>
 
     <link rel="stylesheet" href="../css/estilo.css">
 
@@ -32,7 +32,7 @@ require_once "../includes/mensajes.php";
         <div class="contenedor navbar-contenido">
 
             <a href="listar.php" class="navbar-logo">
-                Agenda<span>Plus</span>
+                Agenda<span>360</span>
             </a>
 
             <div class="navbar-usuario">
@@ -57,10 +57,10 @@ require_once "../includes/mensajes.php";
 
             <div class="formulario-cabecera">
 
-                <h1>Registrar nuevo contacto</h1>
+                <h1>Añadir contacto</h1>
 
                 <p>
-                    Ingresa los datos de la persona para añadirla a tu agenda.
+                    Registra los datos de una nueva persona en tu directorio.
                 </p>
 
             </div>
@@ -79,7 +79,7 @@ require_once "../includes/mensajes.php";
                         type="text"
                         id="nombre"
                         name="nombre"
-                        placeholder="Ej. Juan Pérez"
+                        placeholder="Ej. María López"
                         maxlength="150"
                         required
                     >
@@ -96,7 +96,7 @@ require_once "../includes/mensajes.php";
                         type="text"
                         id="telefono"
                         name="telefono"
-                        placeholder="Ej. 0991234567"
+                        placeholder="Ej. 0987654321"
                         maxlength="30"
                         required
                     >
@@ -113,7 +113,7 @@ require_once "../includes/mensajes.php";
                         type="email"
                         id="correo"
                         name="correo"
-                        placeholder="Ej. juan@correo.com"
+                        placeholder="Ej. maria@correo.com"
                         maxlength="150"
                         required
                     >
@@ -130,7 +130,7 @@ require_once "../includes/mensajes.php";
                         type="text"
                         id="ciudad"
                         name="ciudad"
-                        placeholder="Ej. Loja"
+                        placeholder="Ej. Cuenca"
                         required
                     >
 
