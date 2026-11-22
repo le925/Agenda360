@@ -805,3 +805,277 @@ button.accion-eliminar:hover {
         flex-direction: column;
     }
 }
+
+
+/* --------------------------------------------------------------------------
+   16. MEJORAS DE AGENDA360 (BÚSQUEDA, ORDENAMIENTO, CATEGORÍAS, FAVORITOS)
+   -------------------------------------------------------------------------- */
+
+/* Íconos de métricas */
+.stat-icono {
+    font-size: 28px;
+    background: var(--celeste-suave);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radio-sm);
+    border: 1px solid var(--celeste-borde);
+}
+
+/* Barra de filtros */
+.filtros-contenedor {
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio-md);
+    padding: 18px 22px;
+    margin-bottom: 24px;
+    box-shadow: var(--sombra-suave);
+}
+
+.filtros-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.filtro-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1 1 160px;
+}
+
+.filtro-campo.filtro-buscar {
+    flex: 2 1 280px;
+}
+
+.filtro-campo label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--texto-secundario);
+    letter-spacing: 0.5px;
+}
+
+.filtro-campo select,
+.filtro-campo input[type="text"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--gris-borde);
+    border-radius: var(--radio-sm);
+    font-size: 14px;
+    background-color: #fafbfc;
+    color: var(--texto-principal);
+    transition: all 0.2s ease;
+}
+
+.filtro-campo select:focus,
+.filtro-campo input[type="text"]:focus {
+    background-color: var(--blanco);
+    border-color: var(--celeste-primario);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.input-buscar-grupo {
+    display: flex;
+    gap: 6px;
+}
+
+.input-buscar-grupo input {
+    flex: 1;
+}
+
+.input-buscar-grupo select {
+    width: auto;
+    max-width: 150px;
+    font-size: 13px;
+    padding: 8px 10px;
+}
+
+.filtro-botones {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.btn-filtrar {
+    padding: 10px 18px;
+    font-size: 13.5px;
+    white-space: nowrap;
+}
+
+.btn-limpiar {
+    padding: 10px 14px;
+    font-size: 13.5px;
+    white-space: nowrap;
+}
+
+/* Badges de Categoría */
+.badge-categoria {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.badge-cat-familia {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.badge-cat-amigos {
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+.badge-cat-trabajo {
+    background-color: #fffbeb;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}
+
+.badge-cat-universidad {
+    background-color: #f5f3ff;
+    color: #6d28d9;
+    border: 1px solid #ddd6fe;
+}
+
+.badge-cat-otro {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+/* Botón y columna Favorito */
+.th-favorito {
+    width: 48px;
+    text-align: center !important;
+}
+
+.td-favorito {
+    text-align: center;
+    padding: 12px 10px !important;
+}
+
+.btn-favorito {
+    font-size: 22px;
+    line-height: 1;
+    color: #cbd5e1;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.15s ease, color 0.15s ease;
+    cursor: pointer;
+}
+
+.btn-favorito:hover {
+    color: #f59e0b;
+    transform: scale(1.25);
+}
+
+.btn-favorito.activo {
+    color: #f59e0b;
+    text-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+}
+
+.fila-favorito {
+    background-color: #fffdf5;
+}
+
+.fila-favorito:hover {
+    background-color: #fef9e7 !important;
+}
+
+/* Enlaces y fechas */
+.enlace-contacto {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.enlace-contacto:hover {
+    color: var(--celeste-secundario);
+    text-decoration: underline;
+}
+
+.td-fecha {
+    font-size: 13px;
+    color: var(--texto-mutado);
+    white-space: nowrap;
+}
+
+/* Cuadrículas en formularios */
+.form-grid-dos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-grupo-check {
+    margin: 18px 0;
+    padding: 12px 16px;
+    background-color: var(--celeste-suave);
+    border: 1px dashed var(--celeste-borde);
+    border-radius: var(--radio-md);
+}
+
+.check-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.check-contenedor input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--celeste-primario);
+    cursor: pointer;
+}
+
+.check-texto {
+    font-size: 14px;
+    color: var(--texto-principal);
+}
+
+.estado-vacio-icono {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+/* Ajustes Responsive para filtros */
+@media (max-width: 900px) {
+    .filtros-formulario {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filtro-campo,
+    .filtro-campo.filtro-buscar {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .filtro-botones {
+        width: 100%;
+    }
+
+    .filtro-botones .btn {
+        flex: 1;
+        text-align: center;
+    }
+
+    .form-grid-dos {
+        grid-template-columns: 1fr;
+    }
+}
