@@ -45,12 +45,6 @@ if (isset($_SESSION["usuario_id"])) {
 
             <?php mostrarMensaje(); ?>
 
-            <div class="alerta-demo" style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:12px 14px; margin-bottom:20px; font-size:13px; color:#0369a1;">
-                <strong>💡 Acceso Demo para Evaluación:</strong><br>
-                <span>Correo: <code>demo@agenda360.com</code></span><br>
-                <span>Contraseña: <code>12345678</code></span>
-            </div>
-
             <form action="autenticar.php" method="POST">
 
                 <div class="form-grupo">
