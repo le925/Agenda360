@@ -18,7 +18,7 @@ Aplicación web desarrollada en PHP 8 y MySQL para la gestión académica y prof
 * **Estudiante:** Solis Solis Leovel Alexander
 * **Docente / Tutora:** Ing. TORRES GUARNIZO DIANA ALEXANDRA
 * **Fecha de Entrega:** Noviembre 2026
-* **URL Pública en Hosting Gratuito:** [http://agenda360.infinityfree.io](http://agenda360.infinityfree.io)
+* **URL Pública en Hosting Gratuito:** [https://agenda360.infinityfree.io/Agenda360/index.php)
 * **Repositorio en GitHub:** [https://github.com/le925/Agenda360](https://github.com/le925/Agenda360)
 
 ---
@@ -38,7 +38,7 @@ Para facilitar la revisión por parte de la docente / evaluador sin necesidad de
 
 ## 🚀 Entregables de la Actividad
 
-1. **URL del sistema funcionando:** [http://agenda360.infinityfree.io](http://agenda360.infinityfree.io)
+1. **URL del sistema funcionando:** [https://agenda360.infinityfree.io/Agenda360/index.php)
 2. **Repositorio GitHub:** [https://github.com/le925/Agenda360](https://github.com/le925/Agenda360)
 3. **Script SQL actualizado:** [`Agenda360.sql`](Agenda360.sql)
 
