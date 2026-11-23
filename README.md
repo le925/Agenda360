@@ -23,20 +23,9 @@ Aplicación web desarrollada en PHP 8 y MySQL para la gestión académica y prof
 
 ---
 
-## 🔑 Credenciales de Acceso para Evaluación Rápida
 
-Para facilitar la revisión por parte de la docente / evaluador sin necesidad de registrar una nueva cuenta, se incluye un usuario demo precargado con datos de prueba:
 
-| Rol / Tipo | Correo Electrónico | Contraseña | Base de Datos / Datos incluidos |
-| :--- | :--- | :--- | :--- |
-| **Usuario Demo** | `demo@agenda360.com` | `12345678` | 5 contactos en todas las categorías y favoritos |
-| **Nuevo Registro** | Libre elección | Libre elección | Crea un directorio privado y aislado |
-
-> *Nota:* Cualquier usuario también puede registrar su propia cuenta desde el enlace **"Crear cuenta aquí"** en la pantalla de inicio de sesión.
-
----
-
-## 🚀 Entregables de la Actividad
+##  Entregables de la Actividad
 
 1. **URL del sistema funcionando:** [https://agenda360.infinityfree.io/Agenda360/index.php)
 2. **Repositorio GitHub:** [https://github.com/le925/Agenda360](https://github.com/le925/Agenda360)
@@ -44,7 +33,7 @@ Para facilitar la revisión por parte de la docente / evaluador sin necesidad de
 
 ---
 
-## 🌟 Detalle de las Mejoras Implementadas (Rúbrica: 4 de 4 Opciones)
+##  Detalle de las Mejoras Implementadas 
 
 De acuerdo con la rúbrica de evaluación para la calificación de **Excelente (2.5/2.5 pts en Mejoras Funcionales)**, se implementaron de forma integral las **cuatro mejoras solicitadas**:
 
@@ -105,7 +94,7 @@ De acuerdo con la rúbrica de evaluación para la calificación de **Excelente (
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 * **Backend:** PHP 8.2+ orientado a objetos y funciones modulares, utilizando PDO (PHP Data Objects).
 * **Persistencia:** MySQL / MariaDB con motor transaccional `InnoDB`, juego de caracteres `utf8mb4` y cotejamiento `utf8mb4_unicode_ci`.
@@ -116,7 +105,7 @@ De acuerdo con la rúbrica de evaluación para la calificación de **Excelente (
 
 ---
 
-## 🔒 Mecanismos de Seguridad y Calidad Técnica
+##  Mecanismos de Seguridad y Calidad Técnica
 
 El proyecto cumple con los más altos estándares de calidad técnica exigidos por la rúbrica:
 
@@ -182,7 +171,7 @@ Agenda360/
 
 ---
 
-## 💻 Instrucciones para Instalación Local (XAMPP)
+## Instrucciones para Instalación Local (XAMPP)
 
 1. **Clonar el repositorio:**
    ```bash
@@ -222,12 +211,3 @@ Agenda360/
 
 ---
 
-## 📊 Matriz de Cumplimiento de la Rúbrica de Evaluación
-
-| Criterio | Calificación Obtenida | Evidencia / Justificación |
-| :--- | :---: | :--- |
-| **Implementación de mejoras funcionales** | **Excelente (2.5 / 2.5 pts)** | Se implementaron con éxito las **cuatro mejoras**: **Opción A** (Búsqueda por nombre, correo y ciudad), **Opción B** (Ordenamiento por nombre, ciudad y fecha de creación), **Opción C** (Tabla `categorias` con las 5 requeridas y asignación obligatoria), y **Opción D** (Campo favorito con filtro y toggle rápido). |
-| **Despliegue y funcionamiento en el hosting** | **Excelente (2.5 / 2.5 pts)** | Desplegado y configurado para operar en línea en InfinityFree con dominio público [http://agenda360.infinityfree.io](http://agenda360.infinityfree.io), base de datos remota MySQL y detección automática en `conexion.php`. |
-| **Calidad técnica del desarrollo** | **Excelente (2.5 / 2.5 pts)** | Código PHP 8 limpio y estructurado, conexión mediante PDO, sentencias preparadas contra inyección SQL, escape XSS con `htmlspecialchars`, aislamiento IDOR y diseño responsivo optimizado. |
-| **Repositorio y documentación** | **Excelente (2.5 / 2.5 pts)** | Repositorio GitHub actualizado, script SQL completo con datos de prueba, README detallado con URL pública, credenciales demo, manual de instalación y detalle de mejoras. |
-| **Puntaje Total Proyectado** | **10.0 / 10.0 pts** | Cumplimiento integral de todos los requisitos de la actividad. |
