@@ -1,24 +1,14 @@
 # ==============================================================================
 # Configuración Apache para Agenda360 (Compatible con InfinityFree y XAMPP)
+# NOTA: En InfinityFree NO se permite la directiva "Options -Indexes", causaría 403.
 # ==============================================================================
 
-# 1. Establecer página de inicio por defecto
 DirectoryIndex index.php
 
-# 2. Configuración de codificación predeterminada en UTF-8
 AddDefaultCharset UTF-8
 
-# 3. Ocultar listado de directorios por seguridad
-Options -Indexes
-
-# 4. Proteger archivos sensibles de ser leídos directamente desde el navegador
-<FilesMatch "\.(sql|log|ini|env|example\.php)$">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-# 5. Evitar acceso a carpetas ocultas
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    # Proteger carpetas ocultas
     RewriteRule ^\.git - [F,L]
 </IfModule>
